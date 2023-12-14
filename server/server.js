@@ -7,7 +7,7 @@ const connectDb = require("./config/db");
 
 
 const registerRouters = require('./Routes/register')
-
+const loginRouters = require('./Routes/login')
 
 
 const app = express();
@@ -20,6 +20,9 @@ app.use(cors());
 app.use(bodyParse.json({ limit: "10mb" }));
 
 app.use('/register', registerRouters)
+app.use('/login', loginRouters)
+
+
 
 
 //app.get("/pr", (req, res) => {

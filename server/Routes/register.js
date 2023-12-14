@@ -4,6 +4,6 @@ const {register} = require('../Controllers/register')
 
 
 
-router.post('/create', register)
+router.post('/', register)
 
 module.exports = router

@@ -2,14 +2,14 @@ const mongoose = require('mongoose')
 
 const RegisterSchema = mongoose.Schema(
   {
-    name: String,   
-    surename:{
-      type:String
-    },
-    username:{
+    firstname: String,   
+    surname:{
       type:String
     },
     tel:{
+      type:String
+    },
+    username:{
       type:String
     },
     password: {
