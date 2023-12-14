@@ -22,7 +22,7 @@ exports.login = async(req, res) => {
             //Payload
             var payload = {
                 user:{
-                    name:user.firstname,
+                    name:user.name,
                     surname:user.surname
                 }
             }

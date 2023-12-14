@@ -9,7 +9,7 @@ exports.register = async(req, res) => {
         //res.send(register)
 
         //Check duplicate
-        const { firstname, surname, tel, username, password } = req.body
+        const { name, surname, tel, username, password } = req.body
         var user = await Username.findOne({ username })
         console.log(user)
 
@@ -20,7 +20,7 @@ exports.register = async(req, res) => {
         //Encrypt
         const salt = await bcrypt.genSalt(10)
         user = new Username({
-            firstname,
+            name,
             surname,
             tel,
             username,
