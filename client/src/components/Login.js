@@ -9,7 +9,7 @@ import Container from '@mui/material/Container';
 
 
 
-const Register = () => {
+const Login = () => {
   const [form, setForm] = useState({});
 
   const handleChange = (e) => {
@@ -22,7 +22,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/register', form);
+      const response = await axios.post('http://localhost:8000/login', form);
       console.log(response.data);  // Assuming the server returns useful data
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -45,42 +45,6 @@ const Register = () => {
     </Typography>
 
     <form onSubmit={handleSubmit}>
-
-        <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="name"
-              label="Name"
-              name="name"
-              autoComplete="new-name"
-              autoFocus
-              onChange={handleChange}
-            />
-      
-        <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="surname"
-              label="SurName"
-              name="suename"
-              autoComplete="new-surname"
-              autoFocus
-              onChange={handleChange}
-            />
-
-        <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="tel"
-              label="Tel"
-              name="tel"
-              autoComplete="telphone"
-              autoFocus
-              onChange={handleChange}
-            />
 
         <TextField
               margin="normal"
@@ -120,4 +84,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;
