@@ -64,7 +64,7 @@ const Register = () => {
               fullWidth
               id="surname"
               label="SurName"
-              name="suename"
+              name="surname"
               autoComplete="new-surname"
               autoFocus
               onChange={handleChange}
