@@ -41,7 +41,7 @@ const Login = () => {
           }}
         >
     <Typography component="h1" variant="h5">
-            Register
+            Login
     </Typography>
 
     <form onSubmit={handleSubmit}>

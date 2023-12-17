@@ -3,7 +3,7 @@ import './App.css';
 import Register from './components/Register';
 import Login from './components/Login';
 
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 //Layout
@@ -23,6 +23,9 @@ function App() {
           {/*HeaderBar*/}
           <div className="content_body">
             <Box m="20px">
+            <a class="btn btn-sm btn-outline-secondary" href="/login">Sign In</a> <br></br>
+            <a class="btn btn-sm btn-success" href="/register">Sign Up</a> <br></br>
+            <a class="btn btn-sm btn-home" href="/">Home</a>
               <Routes>
                 <Route path='/register' element={<Register />} />
                 <Route path='/login' element={<Login />} />
